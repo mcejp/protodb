@@ -1,0 +1,1405 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>protodb package &mdash; protodb  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="protodb.drc package" href="protodb.drc.html" />
+    <link rel="prev" title="Welcome to protodb’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> protodb
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">protodb package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="protodb.drc.html">protodb.drc package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protodb.jsonprotocoldatabase">protodb.jsonprotocoldatabase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protodb.model">protodb.model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protodb.protocoldatabase">protodb.protocoldatabase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protodb.sqlprotocoldatabase">protodb.sqlprotocoldatabase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-protodb">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">protodb</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>protodb package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/protodb.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="protodb-package">
+<h1>protodb package<a class="headerlink" href="#protodb-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="protodb.drc.html">protodb.drc package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="protodb.drc.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protodb.drc.html#module-protodb.drc.all_checks">protodb.drc.all_checks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protodb.drc.html#module-protodb.drc">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-protodb.jsonprotocoldatabase">
+<span id="protodb-jsonprotocoldatabase-module"></span><h2>protodb.jsonprotocoldatabase module<a class="headerlink" href="#module-protodb.jsonprotocoldatabase" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.Bus">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">Bus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">dbc_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bitrate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Bus</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Bus.node_links">
+<code class="sig-name descname">node_links</code><em class="property">: Set<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.NodeBusLink" title="protodb.jsonprotocoldatabase.NodeBusLink">protodb.jsonprotocoldatabase.NodeBusLink</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Bus.node_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.EnumType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">EnumType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.EnumType" title="protodb.model.EnumType"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.EnumType</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.EnumType.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.EnumType.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.EnumType.items">
+<code class="sig-name descname">items</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.EnumTypeItem" title="protodb.model.EnumTypeItem">protodb.model.EnumTypeItem</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.EnumType.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.EnumType.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.EnumType.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">JsonProtocolDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">__do_not_use_directly__</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.protocoldatabase.ProtocolDatabase" title="protodb.protocoldatabase.ProtocolDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.protocoldatabase.ProtocolDatabase</span></code></a></p>
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entity</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a></span></em>, <em class="sig-param"><span class="n">who_changed</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.from_model">
+<em class="property">static </em><code class="sig-name descname">from_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">strict</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.from_model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – </p></li>
+<li><p><strong>strict</strong> – if True, strict mode is activated. This means:
+- all referenced buses must be defined
+- Bus.bitrate, Bus.dbc_id are required
+- Message.frame_type, Message.received_by, Message.sent_by are required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_associated_messages">
+<code class="sig-name descname">get_associated_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_associated_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_bus">
+<code class="sig-name descname">get_bus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_bus_nodes">
+<code class="sig-name descname">get_bus_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_bus_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_buses">
+<code class="sig-name descname">get_buses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_buses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_enum_type">
+<code class="sig-name descname">get_enum_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.EnumMessageFieldType" title="protodb.model.EnumMessageFieldType">protodb.model.EnumMessageFieldType</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_enum_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_enum_types">
+<code class="sig-name descname">get_enum_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.EnumType" title="protodb.model.EnumType">protodb.model.EnumType</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_enum_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_message_fields">
+<code class="sig-name descname">get_message_fields</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.MessageField" title="protodb.jsonprotocoldatabase.MessageField">protodb.jsonprotocoldatabase.MessageField</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_message_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_messages">
+<code class="sig-name descname">get_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Message" title="protodb.jsonprotocoldatabase.Message">protodb.jsonprotocoldatabase.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_bus_links">
+<code class="sig-name descname">get_node_bus_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeBusLink" title="protodb.model.NodeBusLink">protodb.model.NodeBusLink</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_bus_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_message">
+<code class="sig-name descname">get_node_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_message_links">
+<code class="sig-name descname">get_node_message_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Message" title="protodb.jsonprotocoldatabase.Message">protodb.jsonprotocoldatabase.Message</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeMessageLink" title="protodb.model.NodeMessageLink">protodb.model.NodeMessageLink</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_node_message_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_nodes">
+<code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_package">
+<code class="sig-name descname">get_package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_package_node">
+<code class="sig-name descname">get_package_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_package_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_packages">
+<code class="sig-name descname">get_packages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.get_packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.message_fields">
+<code class="sig-name descname">message_fields</code><em class="property">: Set<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.MessageField" title="protodb.jsonprotocoldatabase.MessageField">protodb.jsonprotocoldatabase.MessageField</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.message_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.messages">
+<code class="sig-name descname">messages</code><em class="property">: Set<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Message" title="protodb.jsonprotocoldatabase.Message">protodb.jsonprotocoldatabase.Message</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.nodes">
+<code class="sig-name descname">nodes</code><em class="property">: Set<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.packages">
+<code class="sig-name descname">packages</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.resolve_type">
+<code class="sig-name descname">resolve_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a></span></em>, <em class="sig-param"><span class="n">type_str</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.resolve_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.JsonProtocolDatabase.with_path">
+<em class="property">static </em><code class="sig-name descname">with_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.JsonProtocolDatabase.with_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.Message">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">Message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unit</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">frame_type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.FrameType" title="protodb.model.FrameType">protodb.model.FrameType</a></span></em>, <em class="sig-param"><span class="n">can_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">tx_period</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Message</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Message.node_links">
+<code class="sig-name descname">node_links</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeMessageLink" title="protodb.model.NodeMessageLink">protodb.model.NodeMessageLink</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Message.node_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.MessageField">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">MessageField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a></span></em>, <em class="sig-param"><span class="n">size_in_bits</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">array_length</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">unit</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">factor</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offset</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.MessageField" title="protodb.model.MessageField"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.MessageField</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.MessageField.array_length">
+<code class="sig-name descname">array_length</code><em class="property">: int</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField.array_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.MessageField.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.MessageField.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.MessageField.size_in_bits">
+<code class="sig-name descname">size_in_bits</code><em class="property">: int</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField.size_in_bits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.MessageField.type">
+<code class="sig-name descname">type</code><em class="property">: <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.MessageField.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.Node">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.jsonprotocoldatabase.Package" title="protodb.jsonprotocoldatabase.Package">protodb.jsonprotocoldatabase.Package</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Node</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Node.bus_links">
+<code class="sig-name descname">bus_links</code><em class="property">: List<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.NodeBusLink" title="protodb.jsonprotocoldatabase.NodeBusLink">protodb.jsonprotocoldatabase.NodeBusLink</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.bus_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Node.enum_types_by_name">
+<code class="sig-name descname">enum_types_by_name</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.jsonprotocoldatabase.EnumType" title="protodb.jsonprotocoldatabase.EnumType">protodb.jsonprotocoldatabase.EnumType</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.enum_types_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Node.get_enum_type">
+<code class="sig-name descname">get_enum_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.get_enum_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Node.get_enum_types">
+<code class="sig-name descname">get_enum_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.get_enum_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Node.get_message">
+<code class="sig-name descname">get_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.get_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Node.get_messages">
+<code class="sig-name descname">get_messages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Message" title="protodb.jsonprotocoldatabase.Message">protodb.jsonprotocoldatabase.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.get_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Node.message_links">
+<code class="sig-name descname">message_links</code><em class="property">: Set<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeMessageLink" title="protodb.model.NodeMessageLink">protodb.model.NodeMessageLink</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.message_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Node.messages_by_name">
+<code class="sig-name descname">messages_by_name</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Message" title="protodb.jsonprotocoldatabase.Message">protodb.jsonprotocoldatabase.Message</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Node.messages_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.NodeBusLink">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">NodeBusLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em>, <em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></span></em>, <em class="sig-param"><span class="n">note</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.NodeBusLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.NodeBusLink" title="protodb.model.NodeBusLink"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.NodeBusLink</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.NodeBusLink.bus">
+<code class="sig-name descname">bus</code><em class="property">: <a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.NodeBusLink.bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.NodeBusLink.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.NodeBusLink.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.NodeBusLink.note">
+<code class="sig-name descname">note</code><em class="property">: str</em><a class="headerlink" href="#protodb.jsonprotocoldatabase.NodeBusLink.note" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.jsonprotocoldatabase.Package">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.jsonprotocoldatabase.</code><code class="sig-name descname">Package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Package</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Package.buses_by_name">
+<code class="sig-name descname">buses_by_name</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.buses_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Package.get_bus">
+<code class="sig-name descname">get_bus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.get_bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Package.get_buses">
+<code class="sig-name descname">get_buses</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Bus" title="protodb.jsonprotocoldatabase.Bus">protodb.jsonprotocoldatabase.Bus</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.get_buses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Package.get_node">
+<code class="sig-name descname">get_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.get_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.jsonprotocoldatabase.Package.get_nodes">
+<code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.jsonprotocoldatabase.Package.nodes_by_name">
+<code class="sig-name descname">nodes_by_name</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.jsonprotocoldatabase.Node" title="protodb.jsonprotocoldatabase.Node">protodb.jsonprotocoldatabase.Node</a><span class="p">]</span></em><a class="headerlink" href="#protodb.jsonprotocoldatabase.Package.nodes_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-protodb.model">
+<span id="protodb-model-module"></span><h2>protodb.model module<a class="headerlink" href="#module-protodb.model" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="protodb.model.BasicMessageFieldType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">BasicMessageFieldType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.BasicMessageFieldType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.MessageFieldType</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.BasicMessageFieldType.type_name">
+<code class="sig-name descname">type_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.BasicMessageFieldType.type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.Bus">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">Bus</code><a class="headerlink" href="#protodb.model.Bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.Bus.bitrate">
+<code class="sig-name descname">bitrate</code><em class="property">: Optional<span class="p">[</span>int<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Bus.bitrate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Bus.dbc_id">
+<code class="sig-name descname">dbc_id</code><em class="property">: Optional<span class="p">[</span>int<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Bus.dbc_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Bus.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Bus.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Bus.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Bus.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Bus.package">
+<code class="sig-name descname">package</code><em class="property">: <a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a></em><a class="headerlink" href="#protodb.model.Bus.package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.Entity">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">Entity</code><a class="headerlink" href="#protodb.model.Entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.EnumMessageFieldType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">EnumMessageFieldType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em>, <em class="sig-param"><span class="n">enum</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.EnumMessageFieldType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.MessageFieldType</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.EnumMessageFieldType.enum">
+<code class="sig-name descname">enum</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumMessageFieldType.enum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumMessageFieldType.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumMessageFieldType.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumMessageFieldType.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.model.EnumMessageFieldType.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.EnumType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">EnumType</code><a class="headerlink" href="#protodb.model.EnumType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="protodb.model.EnumType.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumType.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumType.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumType.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumType.items">
+<code class="sig-name descname">items</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.EnumTypeItem" title="protodb.model.EnumTypeItem">protodb.model.EnumTypeItem</a><span class="p">]</span></em><a class="headerlink" href="#protodb.model.EnumType.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumType.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumType.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.model.EnumType.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.EnumTypeItem">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">EnumTypeItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.EnumTypeItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="protodb.model.EnumTypeItem.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumTypeItem.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumTypeItem.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.EnumTypeItem.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.EnumTypeItem.value">
+<code class="sig-name descname">value</code><em class="property">: int</em><a class="headerlink" href="#protodb.model.EnumTypeItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.FrameType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">FrameType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.FrameType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="protodb.model.FrameType.CAN_EXT">
+<code class="sig-name descname">CAN_EXT</code><em class="property"> = 2</em><a class="headerlink" href="#protodb.model.FrameType.CAN_EXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.FrameType.CAN_STD">
+<code class="sig-name descname">CAN_STD</code><em class="property"> = 1</em><a class="headerlink" href="#protodb.model.FrameType.CAN_STD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.Message">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">Message</code><a class="headerlink" href="#protodb.model.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.Message.bus">
+<code class="sig-name descname">bus</code><em class="property">: <a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></em><a class="headerlink" href="#protodb.model.Message.bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.can_id">
+<code class="sig-name descname">can_id</code><em class="property">: Optional<span class="p">[</span>int<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Message.can_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Message.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.fields">
+<code class="sig-name descname">fields</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.MessageField" title="protodb.model.MessageField">protodb.model.MessageField</a><span class="p">]</span></em><a class="headerlink" href="#protodb.model.Message.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.frame_type">
+<code class="sig-name descname">frame_type</code><em class="property">: <a class="reference internal" href="#protodb.model.FrameType" title="protodb.model.FrameType">protodb.model.FrameType</a></em><a class="headerlink" href="#protodb.model.Message.frame_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Message.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Message.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.timeout">
+<code class="sig-name descname">timeout</code><em class="property">: Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Message.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.tx_period">
+<code class="sig-name descname">tx_period</code><em class="property">: Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Message.tx_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Message.unit">
+<code class="sig-name descname">unit</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.model.Message.unit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.MessageField">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">MessageField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a></span></em>, <em class="sig-param"><span class="n">size_in_bits</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">array_length</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">unit</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">factor</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offset</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">min</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.MessageField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.array_length">
+<code class="sig-name descname">array_length</code><em class="property">: int</em><a class="headerlink" href="#protodb.model.MessageField.array_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.MessageField.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.factor">
+<code class="sig-name descname">factor</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.factor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.max">
+<code class="sig-name descname">max</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.message">
+<code class="sig-name descname">message</code><em class="property">: <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.min">
+<code class="sig-name descname">min</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.MessageField.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.offset">
+<code class="sig-name descname">offset</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.size_in_bits">
+<code class="sig-name descname">size_in_bits</code><em class="property">: int</em><a class="headerlink" href="#protodb.model.MessageField.size_in_bits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.type">
+<code class="sig-name descname">type</code><em class="property">: <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a></em><a class="headerlink" href="#protodb.model.MessageField.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.MessageField.unit">
+<code class="sig-name descname">unit</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.model.MessageField.unit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.MessageFieldType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">MessageFieldType</code><a class="headerlink" href="#protodb.model.MessageFieldType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.Node">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">Node</code><a class="headerlink" href="#protodb.model.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.Node.description">
+<code class="sig-name descname">description</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#protodb.model.Node.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Node.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Node.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Node.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Node.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Node.package">
+<code class="sig-name descname">package</code><em class="property">: <a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a></em><a class="headerlink" href="#protodb.model.Node.package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.NodeBusLink">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">NodeBusLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em>, <em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></span></em>, <em class="sig-param"><span class="n">note</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.NodeBusLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="protodb.model.NodeBusLink.bus">
+<code class="sig-name descname">bus</code><em class="property">: <a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></em><a class="headerlink" href="#protodb.model.NodeBusLink.bus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.NodeBusLink.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.model.NodeBusLink.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.NodeBusLink.note">
+<code class="sig-name descname">note</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.NodeBusLink.note" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.NodeMessageLink">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">NodeMessageLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a></span></em>, <em class="sig-param"><span class="n">link_type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.NodeMessageLinkType" title="protodb.model.NodeMessageLinkType">protodb.model.NodeMessageLinkType</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.NodeMessageLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="protodb.model.NodeMessageLink.link_type">
+<code class="sig-name descname">link_type</code><em class="property">: <a class="reference internal" href="#protodb.model.NodeMessageLinkType" title="protodb.model.NodeMessageLinkType">protodb.model.NodeMessageLinkType</a></em><a class="headerlink" href="#protodb.model.NodeMessageLink.link_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.NodeMessageLink.message">
+<code class="sig-name descname">message</code><em class="property">: <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a></em><a class="headerlink" href="#protodb.model.NodeMessageLink.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.NodeMessageLink.node">
+<code class="sig-name descname">node</code><em class="property">: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></em><a class="headerlink" href="#protodb.model.NodeMessageLink.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.NodeMessageLinkType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">NodeMessageLinkType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.model.NodeMessageLinkType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="protodb.model.NodeMessageLinkType.RECEIVER">
+<code class="sig-name descname">RECEIVER</code><em class="property"> = 2</em><a class="headerlink" href="#protodb.model.NodeMessageLinkType.RECEIVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.NodeMessageLinkType.SENDER">
+<code class="sig-name descname">SENDER</code><em class="property"> = 1</em><a class="headerlink" href="#protodb.model.NodeMessageLinkType.SENDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.model.Package">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.model.</code><code class="sig-name descname">Package</code><a class="headerlink" href="#protodb.model.Package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.model.Package.fully_qualified_name">
+<code class="sig-name descname">fully_qualified_name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Package.fully_qualified_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.model.Package.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><a class="headerlink" href="#protodb.model.Package.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-protodb.protocoldatabase">
+<span id="protodb-protocoldatabase-module"></span><h2>protodb.protocoldatabase module<a class="headerlink" href="#module-protodb.protocoldatabase" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt id="protodb.protocoldatabase.InvalidScopeError">
+<em class="property">exception </em><code class="sig-prename descclassname">protodb.protocoldatabase.</code><code class="sig-name descname">InvalidScopeError</code><a class="headerlink" href="#protodb.protocoldatabase.InvalidScopeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.protocoldatabase.ProtocolDatabase">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.protocoldatabase.</code><code class="sig-name descname">ProtocolDatabase</code><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.delete">
+<em class="property">abstract </em><code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entity</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a></span></em>, <em class="sig-param"><span class="n">who_changed</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_associated_messages">
+<em class="property">abstract </em><code class="sig-name descname">get_associated_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_associated_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_bus_nodes">
+<em class="property">abstract </em><code class="sig-name descname">get_bus_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_bus_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_buses">
+<em class="property">abstract </em><code class="sig-name descname">get_buses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus">protodb.model.Bus</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_buses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_enum_type">
+<em class="property">abstract </em><code class="sig-name descname">get_enum_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.EnumMessageFieldType" title="protodb.model.EnumMessageFieldType">protodb.model.EnumMessageFieldType</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_enum_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_enum_types">
+<em class="property">abstract </em><code class="sig-name descname">get_enum_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.EnumType" title="protodb.model.EnumType">protodb.model.EnumType</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_enum_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_message">
+<code class="sig-name descname">get_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_message_fields">
+<em class="property">abstract </em><code class="sig-name descname">get_message_fields</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.MessageField" title="protodb.model.MessageField">protodb.model.MessageField</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_message_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_messages">
+<em class="property">abstract </em><code class="sig-name descname">get_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_node">
+<code class="sig-name descname">get_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_node_bus_links">
+<em class="property">abstract </em><code class="sig-name descname">get_node_bus_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeBusLink" title="protodb.model.NodeBusLink">protodb.model.NodeBusLink</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_node_bus_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_node_message">
+<em class="property">abstract </em><code class="sig-name descname">get_node_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_node_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_node_message_links">
+<em class="property">abstract </em><code class="sig-name descname">get_node_message_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeMessageLink" title="protodb.model.NodeMessageLink">protodb.model.NodeMessageLink</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_node_message_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_nodes">
+<em class="property">abstract </em><code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_package">
+<em class="property">abstract </em><code class="sig-name descname">get_package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fully_qualified_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_package_node">
+<em class="property">abstract </em><code class="sig-name descname">get_package_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_package_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.protocoldatabase.ProtocolDatabase.get_packages">
+<em class="property">abstract </em><code class="sig-name descname">get_packages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><span class="p">]</span><a class="headerlink" href="#protodb.protocoldatabase.ProtocolDatabase.get_packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-protodb.sqlprotocoldatabase">
+<span id="protodb-sqlprotocoldatabase-module"></span><h2>protodb.sqlprotocoldatabase module<a class="headerlink" href="#module-protodb.sqlprotocoldatabase" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.Bus">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">Bus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">dbc_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">bitrate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.Bus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Bus" title="protodb.model.Bus"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Bus</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Bus.db">
+<code class="sig-name descname">db</code><em class="property">: <a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Bus.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Bus.id">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Bus.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.ChangelogAction">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">ChangelogAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.ChangelogAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.ChangelogAction.DELETE">
+<code class="sig-name descname">DELETE</code><em class="property"> = 1</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.ChangelogAction.DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.ChangelogEntityType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">ChangelogEntityType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.ChangelogEntityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.ChangelogEntityType.MESSAGE">
+<code class="sig-name descname">MESSAGE</code><em class="property"> = 1</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.ChangelogEntityType.MESSAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.ChangelogEntityType.NODE">
+<code class="sig-name descname">NODE</code><em class="property"> = 2</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.ChangelogEntityType.NODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.EnumType">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">EnumType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">items</span><span class="p">:</span> <span class="n">Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.EnumTypeItem" title="protodb.model.EnumTypeItem">protodb.model.EnumTypeItem</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.EnumType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.EnumType" title="protodb.model.EnumType"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.EnumType</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.EnumType.id">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.EnumType.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.Message">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">Message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">bus_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">frame_type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.FrameType" title="protodb.model.FrameType">protodb.model.FrameType</a></span></em>, <em class="sig-param"><span class="n">can_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">unit_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">tx_period</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>datetime.timedelta<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Message</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Message.bus_id">
+<code class="sig-name descname">bus_id</code><em class="property">: Optional<span class="p">[</span>int<span class="p">]</span></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Message.bus_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Message.db">
+<code class="sig-name descname">db</code><em class="property">: <a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">SqlProtocolDatabase</a></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Message.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Message.id">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Message.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Message.unit_id">
+<code class="sig-name descname">unit_id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Message.unit_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.MessageField">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">MessageField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a></span></em>, <em class="sig-param"><span class="n">size_in_bits</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">array_length</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">unit</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">factor</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">offset</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">min</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">max</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.MessageField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.MessageField" title="protodb.model.MessageField"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.MessageField</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.Node">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Node</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Node.db">
+<code class="sig-name descname">db</code><em class="property">: <a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Node.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.NodeBusLink">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">NodeBusLink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">bus_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">unit_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">note</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.NodeBusLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.NodeBusLink" title="protodb.model.NodeBusLink"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.NodeBusLink</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.NodeBusLink.bus_id">
+<code class="sig-name descname">bus_id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.NodeBusLink.bus_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.NodeBusLink.db">
+<code class="sig-name descname">db</code><em class="property">: <a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.NodeBusLink.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.NodeBusLink.id">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.NodeBusLink.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.NodeBusLink.unit_id">
+<code class="sig-name descname">unit_id</code><em class="property">: int</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.NodeBusLink.unit_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.Package">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">Package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.Package" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.model.Package</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.Package.db">
+<code class="sig-name descname">db</code><em class="property">: <a class="reference internal" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="protodb.sqlprotocoldatabase.SqlProtocolDatabase">protodb.sqlprotocoldatabase.SqlProtocolDatabase</a></em><a class="headerlink" href="#protodb.sqlprotocoldatabase.Package.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase">
+<em class="property">class </em><code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">SqlProtocolDatabase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn_string</span></em>, <em class="sig-param"><span class="n">run_consistency_checks</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#protodb.protocoldatabase.ProtocolDatabase" title="protodb.protocoldatabase.ProtocolDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">protodb.protocoldatabase.ProtocolDatabase</span></code></a></p>
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_buses">
+<code class="sig-name descname">all_buses</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a><span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_buses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_enum_types">
+<code class="sig-name descname">all_enum_types</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.EnumType" title="protodb.sqlprotocoldatabase.EnumType">protodb.sqlprotocoldatabase.EnumType</a><span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_enum_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_messages">
+<code class="sig-name descname">all_messages</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_units">
+<code class="sig-name descname">all_units</code><em class="property">: Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span></em><em class="property"> = None</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.all_units" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.buses_by_id">
+<code class="sig-name descname">buses_by_id</code><em class="property">: Dict<span class="p">[</span>int<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.buses_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.conn">
+<code class="sig-name descname">conn</code><em class="property">: mysql.connector.connection.MySQLConnection</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.conn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entity</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a></span></em>, <em class="sig-param"><span class="n">who_changed</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.enum_types_by_id">
+<code class="sig-name descname">enum_types_by_id</code><em class="property">: Dict<span class="p">[</span>int<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.EnumType" title="protodb.sqlprotocoldatabase.EnumType">protodb.sqlprotocoldatabase.EnumType</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.enum_types_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_associated_messages">
+<code class="sig-name descname">get_associated_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_associated_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_bus_by_id">
+<code class="sig-name descname">get_bus_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">db_row</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_bus_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_bus_nodes">
+<code class="sig-name descname">get_bus_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_bus_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_buses">
+<code class="sig-name descname">get_buses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_buses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_buses_with_filter">
+<code class="sig-name descname">get_buses_with_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Bus" title="protodb.sqlprotocoldatabase.Bus">protodb.sqlprotocoldatabase.Bus</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_buses_with_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_type">
+<code class="sig-name descname">get_enum_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.model.EnumMessageFieldType" title="protodb.model.EnumMessageFieldType">protodb.model.EnumMessageFieldType</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_type_by_id">
+<code class="sig-name descname">get_enum_type_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enum_type_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">db_row</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.EnumType" title="protodb.sqlprotocoldatabase.EnumType">protodb.sqlprotocoldatabase.EnumType</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_type_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_types">
+<code class="sig-name descname">get_enum_types</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.EnumType" title="protodb.sqlprotocoldatabase.EnumType">protodb.sqlprotocoldatabase.EnumType</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_types_with_filter">
+<code class="sig-name descname">get_enum_types_with_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.EnumType" title="protodb.sqlprotocoldatabase.EnumType">protodb.sqlprotocoldatabase.EnumType</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_enum_types_with_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_message_by_id">
+<code class="sig-name descname">get_message_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">db_row</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_message_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_message_fields">
+<code class="sig-name descname">get_message_fields</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.model.Entity" title="protodb.model.Entity">protodb.model.Entity</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.MessageField" title="protodb.model.MessageField">protodb.model.MessageField</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_message_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_messages">
+<code class="sig-name descname">get_messages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_messages_with_filter">
+<code class="sig-name descname">get_messages_with_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bus_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_messages_with_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_bus_links">
+<code class="sig-name descname">get_node_bus_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.NodeBusLink" title="protodb.sqlprotocoldatabase.NodeBusLink">protodb.sqlprotocoldatabase.NodeBusLink</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_bus_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_message">
+<code class="sig-name descname">get_node_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Message" title="protodb.model.Message">protodb.model.Message</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_message_links">
+<code class="sig-name descname">get_node_message_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.NodeMessageLink" title="protodb.model.NodeMessageLink">protodb.model.NodeMessageLink</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_node_message_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_nodes">
+<code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scope</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_nodes_with_filter">
+<code class="sig-name descname">get_nodes_with_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">package_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_nodes_with_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package">
+<code class="sig-name descname">get_package</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package_by_id">
+<code class="sig-name descname">get_package_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">db_row</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package_node">
+<code class="sig-name descname">get_package_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.Node" title="protodb.model.Node">protodb.model.Node</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_package_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_packages">
+<code class="sig-name descname">get_packages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.model.Package" title="protodb.model.Package">protodb.model.Package</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_unit_by_id">
+<code class="sig-name descname">get_unit_by_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unit_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">db_row</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.get_unit_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.have_all_packages">
+<code class="sig-name descname">have_all_packages</code><em class="property">: bool</em><em class="property"> = False</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.have_all_packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.load_message_fields">
+<code class="sig-name descname">load_message_fields</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a></span></em><span class="sig-paren">)</span> &#x2192; Iterable<span class="p">[</span><a class="reference internal" href="#protodb.sqlprotocoldatabase.MessageField" title="protodb.sqlprotocoldatabase.MessageField">protodb.sqlprotocoldatabase.MessageField</a><span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.load_message_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.messages_by_id">
+<code class="sig-name descname">messages_by_id</code><em class="property">: Dict<span class="p">[</span>int<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Message" title="protodb.sqlprotocoldatabase.Message">protodb.sqlprotocoldatabase.Message</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.messages_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.packages_by_id">
+<code class="sig-name descname">packages_by_id</code><em class="property">: Dict<span class="p">[</span>int<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.packages_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.packages_by_name">
+<code class="sig-name descname">packages_by_name</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Package" title="protodb.sqlprotocoldatabase.Package">protodb.sqlprotocoldatabase.Package</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.packages_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.resolve_type">
+<code class="sig-name descname">resolve_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type_name_or_enum_id</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.model.MessageFieldType" title="protodb.model.MessageFieldType">protodb.model.MessageFieldType</a><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.resolve_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.run_consistency_checks">
+<code class="sig-name descname">run_consistency_checks</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.run_consistency_checks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.transaction_begin">
+<code class="sig-name descname">transaction_begin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.transaction_begin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.transaction_commit">
+<code class="sig-name descname">transaction_commit</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.transaction_commit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="protodb.sqlprotocoldatabase.SqlProtocolDatabase.units_by_id">
+<code class="sig-name descname">units_by_id</code><em class="property">: Dict<span class="p">[</span>int<span class="p">, </span><a class="reference internal" href="#protodb.sqlprotocoldatabase.Node" title="protodb.sqlprotocoldatabase.Node">protodb.sqlprotocoldatabase.Node</a><span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#protodb.sqlprotocoldatabase.SqlProtocolDatabase.units_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="protodb.sqlprotocoldatabase.build_filter">
+<code class="sig-prename descclassname">protodb.sqlprotocoldatabase.</code><code class="sig-name descname">build_filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">]</span><a class="headerlink" href="#protodb.sqlprotocoldatabase.build_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamically append WHERE clause to query and populate argument tuple</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-protodb">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-protodb" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="protodb.connect">
+<code class="sig-prename descclassname">protodb.</code><code class="sig-name descname">connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn_string</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#protodb.protocoldatabase.ProtocolDatabase" title="protodb.protocoldatabase.ProtocolDatabase">protodb.protocoldatabase.ProtocolDatabase</a><a class="headerlink" href="#protodb.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a protocol database connection. For the time being, the connections are to be assumed NOT thread-safe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>conn_string</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="protodb.drc.html" class="btn btn-neutral float-right" title="protodb.drc package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to protodb’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Martin Cejp.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
