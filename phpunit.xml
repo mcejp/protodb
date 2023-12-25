@@ -1,0 +1,30 @@
+<phpunit>
+    <php>
+        <includePath>/var/www/html/</includePath>
+    </php>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">/var/www/html/candb</directory>
+        </include>
+
+        <report>
+            <!--<clover outputFile="clover.xml"/>-->
+            <!--<crap4j outputFile="crap4j.xml" threshold="50"/>-->
+            <html outputDirectory="/var/www/html/build/coverage" lowUpperBound="35" highLowerBound="70"/>
+            <!--<php outputFile="coverage.php"/>-->
+            <text outputFile="/var/www/html/build/coverage.txt" showUncoveredFiles="true"/>
+            <!--<xml outputDirectory="xml-coverage"/>-->
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile="/var/www/html/build/report-phpunit.xml"/>
+    </logging>
+
+    <testsuites>
+        <testsuite name="candb-tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

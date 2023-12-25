@@ -1,0 +1,422 @@
+{% extends "base.html" %}
+
+{% block extra_scripts %}
+{% if IS_DEVEL -%}
+<script src="https://unpkg.com/vue@3"></script>
+{%- else -%}
+<script src="https://cdn.jsdelivr.net/npm/vue@3.1.4/dist/vue.global.prod.js"></script>
+{%- endif %}
+{% endblock %}
+
+{% block page_style %}
+<style>
+.big-link {
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.dash-top-row>*:not(:first-child) {
+    border-left: 1px solid #dcdcdc;
+}
+
+input.big-search {
+    font-size: 20px;
+}
+
+.dash-row {
+    background-color: #f8f8f8;
+    margin-bottom: 1em;
+}
+
+.dash-row a {
+    color: #333;
+}
+
+.dash-package-label {
+    border-right: 1px solid #e8e8e8;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 24px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.dash-package-buses {
+    border-right: 1px solid #e8e8e8;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0;
+}
+
+.dash-package-bus {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.dash-package-bus-link {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.3em 0.8em;
+}
+
+.dash-package-bus-appendix {
+    display: flex;
+    align-items: center;
+
+    padding: 0.3em 0.6em;
+}
+
+.dash-package-label:hover,
+.dash-package-node:hover,
+.dash-package-node:nth-child(2n):hover,
+.dash-package-appendix:hover,
+.dash-package-bus-link:hover,
+.dash-package-bus-appendix:hover {
+    background-color: #e8e8e8;
+}
+
+.dash-package-nodes {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 0;
+}
+
+.dash-package-appendix {
+    display: flex;
+    align-items: center;
+
+    padding: 0.3rem 1rem;
+}
+
+.dash-package-node {
+    padding: 0.3rem 0.7rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dash-nodes-decoration {
+    padding: 0.3rem 0.8rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dash-package {
+    border-left: 3px solid transparent;
+}
+
+{# FIXME: DRY #}
+.unpad {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.unpad tr>*:first-child {
+    padding-left: 15px !important;
+}
+
+.unpad tr>*:last-child {
+    padding-right: 15px !important;
+}
+
+.table-no-border-top tr:first-child>td {
+    border-top: none;
+}
+
+[v-cloak] { display: none; }
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="my-app">
+<div class="container">
+    <div class="row dash-top-row">
+        <div class="col">
+            <input type="text" class="big-search form-control" placeholder="Search instantly" autofocus v-model="searchQuery" v-on:input="updateSearch">
+        </div>
+        {% for link in links %}
+        <a href="{{ link.url }}" class="col-auto big-link">{{ link.title_html | safe }}</a>
+        {% endfor %}
+        <div class="col-auto" style="font-size: 0.9rem">
+            <div class="">Version: <strong>{{ APP_VERSION }}</strong></div>
+            <div><a href="help/changelog">Changelog</a></div>
+        </div>
+    </div>
+</div>
+    <div class="container container-paper mt-4" v-if="searchResults" v-cloak>
+        <div class="unpad">
+        <table class="table table-sm table-no-border-top">
+            <tbody>
+            <tr v-for="entity in searchResults">
+                <td style="font-size: 1.25rem; width: 1px;">
+                    <a v-bind:href="entity.url">
+                        <span v-if="entity.type == 'package'">&#x1F4E6;</span>
+                        <span v-if="entity.type == 'bus'"><i class="fas fa-network-wired"></i></span>
+                        <span v-if="entity.type == 'node'">&#x1F4BB;</span>
+                        <span v-if="entity.type == 'enum_type'"><i class="fas fa-list"></i></span>
+                        <span v-if="entity.type == 'message'">&#x2709;&#xFE0F;</span>
+                        <span v-if="entity.type == 'message_field'">&#x1F4C8;</span>
+                    </a>
+                </td>
+                <td>
+                    <a v-bind:href="entity.url" style="font-size: 1.25rem;">[[ entity.name ]]</a>
+                </td>
+            </tr>
+            <tr v-if="searchResults.length === 0">
+                <td colspan="2" class="text-center">No results.</td>
+            </tr>
+            <tr v-if="moreResults">
+                <td colspan="2" class="text-center">Additional results found, please narrow down the search terms.</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+<div class="container container-paper mt-4">
+    <h1 class="text-muted">&#x1F4CC;&ensp;Pinned</h1>
+    {% for pin in packages_pinned %}
+    {% set package = pin.package %}
+    <div class="row dash-row dash-package" style="border-left: 3px solid {{ pin.color }};">
+        <a href="packages/{{ package.id }}" class="col-6 col-md-2 dash-package-label">
+            {{ package.name }}
+        </a>
+        <div class="col-6 col-md-2 dash-package-buses list-unstyled">
+            {% for bus in package.buses %}
+            <div class="dash-package-bus">
+            <a href="buses/{{ bus.id }}" class="dash-package-bus-link"><i class="fas fa-network-wired"></i>&ensp;{{ bus.name }}</a>
+            <a href="buses/{{ bus.id }}/export-dbc" class="dash-package-bus-appendix"><i class="fas fa-arrow-down"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-12 d-md-none" style="border-top: 1px solid #e8e8e8"></div>
+        <div class="col dash-package-nodes">
+            {% for unit in package.units %}
+            <a href="units/{{ unit.id }}" class="dash-package-node">{{ unit.name }}</a>
+            {% endfor %}
+        </div>
+        <a href="packages/{{ package.id }}/export-json2" class="dash-package-appendix"><i class="fas fa-arrow-down"></i></a>
+    </div>
+    {% endfor %}
+</div>
+<div class="container container-paper mt-4">
+    <h1 class="text-muted">&#x1F4E6;&ensp;Other packages</h1>
+    {% for package in packages_other %}
+    <div class="row dash-row dash-package">
+        <div class="col-6 col-md-2 dash-package-label">
+            <a href="packages/{{ package.id }}">{{ package.name }}</a>
+        </div>
+        <div class="col-6 col-md-2 dash-package-buses list-unstyled">
+            {% for bus in package.buses %}
+            <div class="dash-package-bus">
+                <a href="buses/{{ bus.id }}" class="dash-package-bus-link"><i class="fas fa-network-wired"></i>&ensp;{{ bus.name }}</a>
+                <a href="buses/{{ bus.id }}/export-dbc" class="dash-package-bus-appendix"><i class="fas fa-arrow-down"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+        {# Additional horizontal border in compact view #}
+        <div class="col-12 d-md-none" style="border-top: 1px solid #e8e8e8"></div>
+        <div class="col dash-package-nodes">
+            {% for unit in package.units %}
+            <a href="units/{{ unit.id }}" class="dash-package-node">{{ unit.name }}</a>
+            {% endfor %}
+        </div>
+        <a href="packages/{{ package.id }}/export-json2" class="dash-package-appendix"><i class="fas fa-arrow-down"></i></a>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+{# TODO: fetch asynchronously #}
+const searchData = {{ search_data | tojson }};
+
+function splicePure(myArray, indexToRemove, count) {
+    return myArray.slice(0, indexToRemove).concat(myArray.slice(indexToRemove + count));
+}
+
+function findAllKeywordsStartingWith(token) {
+    // TODO: optimize using the fact that _allKeywords are sorted
+    return searchData._allKeywords.filter(keyword => keyword.startsWith(token));
+}
+
+function sortResultsByScore(results, searchTokens) {
+    // For every result:
+    //  - begin at 0 points
+    //  - for every keyword:
+    //    - find best-matching search token, award points based on how much of length is covered
+    //    - if no matching search token, award *negative* points corresponding to keyword length
+
+    const resultsWithScore = [];
+
+    for (const entityId of results) {
+        let score = 0;
+
+        for (const entityKeyword of searchData._keywords[entityId]) {
+            // Find best-matching search token
+            let longestMatch = 0;
+
+            for (const searchToken of searchTokens) {
+                if (entityKeyword.startsWith(searchToken)) {
+                    longestMatch = Math.max(longestMatch, searchToken.length / entityKeyword.length);
+                }
+            }
+
+            if (longestMatch === 0) {
+                score -= 1;
+            }
+            else {
+                score += longestMatch;
+            }
+        }
+
+        resultsWithScore.push([score, entityId]);
+    }
+
+    // console.log(resultsWithScore);
+    return resultsWithScore.sort().reverse().map((score_entity) => score_entity[1]);
+}
+
+function doSearch(query, maxResults) {
+    const searchTokens = query.toUpperCase().split(" ").filter(token => token);
+
+    if (!searchTokens.length) {
+        return [];
+    }
+
+    // First, find the exact candidates
+    // Search for best keyword (least number of results)
+    let bestCount = -1;
+    let bestTokenIndex;
+
+    // for (const token of tokens) {
+    for (const [i, token] of searchTokens.entries()) {
+        const matchingKeywords = findAllKeywordsStartingWith(token);
+
+        if (!matchingKeywords.length) {
+            // No match. TODO: Can re-try with fuzzier search
+            return [];
+        }
+
+        // calculate total match count
+        const count = matchingKeywords.map(keyword => searchData._index[keyword].length).reduce((a, b) => a + b, 0)
+
+        if (bestCount < 0 || count < bestCount) {
+            bestCount = count;
+            bestTokenIndex =  i;
+        }
+    }
+
+    const matchingKeywords = findAllKeywordsStartingWith(searchTokens[bestTokenIndex]);
+    const candidateIds = [...new Set(matchingKeywords.map(keyword => searchData._index[keyword]).reduce((a, b) => a.concat(b), []))];
+    const remSearchTokens = splicePure(searchTokens, bestTokenIndex, 1);
+
+    // Check candidates against remaining tokens
+    if (remSearchTokens.length === 0) {
+        // No more tokens, accept all
+        return sortResultsByScore(candidateIds, searchTokens).slice(0, maxResults);
+    }
+    else {
+        const results = [];
+
+        for (let i = 0; i < candidateIds.length /*&& results.length < maxResults*/; i++) {
+            const candidate = candidateIds[i];
+
+            // Validate candidate
+            const tokenApplies = (entity, searchToken) => {
+                for (const entityKeyword of searchData._keywords[candidate]) {
+                    if (entityKeyword.startsWith(searchToken)) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            if (remSearchTokens.every((searchToken) => tokenApplies(candidate, searchToken))) {
+                results.push(candidate);
+            }
+        }
+
+        return sortResultsByScore(results, searchTokens).slice(0, maxResults);
+    }
+}
+
+function presentResults(resIds) {
+    return resIds.map(entityId => { return {
+        url: searchData.url[entityId],
+        name: searchData.name[entityId],
+        type: searchData._allTypes[searchData.type[entityId]].toLowerCase(),
+    }});
+}
+
+const appModel = {
+    data: function () {
+        return {
+            searchQuery: "",
+            searchResults: null,
+            moreResults: false,
+        };
+    },
+    delimiters: ['[[', ']]'],
+    methods: {
+        updateSearch: function() {
+            const query = this.searchQuery;
+
+            if (!query) {
+                this.searchResults = null;
+                return;
+            }
+
+            const maxResults = 25;
+            const resIds = doSearch(query, maxResults + 1);
+            // console.log(resIds);
+
+            const res = presentResults(resIds);
+
+            this.searchResults = res.slice(0, maxResults);
+            this.moreResults = (res.length > maxResults);
+        }
+    },
+    mounted() {
+        let input = document.querySelector('[autofocus]');
+
+        if (input) {
+            input.focus();
+        }
+    }
+};
+
+// https://github.com/vuejs/vue/issues/11165
+window.addEventListener('pageshow', () => {
+    const app = Vue.createApp(appModel);
+    const mv = app.mount("#my-app");
+});
+</script>
+{% endblock %}
+
+{% block footer_left %}
+<a href="?new_dashboard=0"><strong>Switch to classic dashboard</strong></a>
+{% endblock %}

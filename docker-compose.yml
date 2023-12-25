@@ -1,0 +1,69 @@
+version: "2.1"
+
+# NOTE: Only for testing, use external MySQL server in production!
+
+services:
+  protodb:
+    build:
+      context: .
+      dockerfile: container/Dockerfile
+    working_dir: /var/www/html
+    environment:
+      # PROTODB_LOGIN_METHOD: one of
+      #  - arbitrary
+      #  - header
+      - PROTODB_LOGIN_METHOD=arbitrary
+      - PROTODB_BASE_PATH=/
+      - PROTODB_DEVELOPMENT=1
+      - PROTODB_INSTANCE_NAME=localhost
+      - PROTODB_SHOW_INSTANCE_NAME=1
+
+      - PROTODB_PDO_DSN=mysql:host=mariadb;dbname=candb;charset=utf8mb4;collation=utf8mb4_unicode_ci
+      - PROTODB_PDO_USER=candb
+      - PROTODB_PDO_PASSWORD=password
+      - PROTODB_CONN_STRING=mysql:host=mariadb;dbname=candb;charset=utf8mb4;collation=utf8mb4_unicode_ci;user=candb;password=password
+
+      - PROTODB_ERRORS_MAILFROM=root@localhost
+      - PROTODB_ERRORS_MAILTO=root@localhost
+      - PROTODB_SENTRY_DSN=
+      - SENDGRID_API_KEY=
+    ports:
+      - "10080:10080"
+    volumes:
+      # Mount-over source code for faster iteration in development
+      - ./api-server:/var/www/html/api-server:z
+      - ./candb:/var/www/html/candb:z
+      - ./db_schema:/var/www/html/db_schema:z
+      - ./protodb:/var/www/html/protodb:z
+      - ./static:/var/www/html/static:z
+      - ./tests:/var/www/html/tests:z
+      - ./vendor:/var/www/html/vendor:z
+      - ./views:/var/www/html/views:z
+      - ./bootstrap.php:/var/www/html/bootstrap.php:z
+      - ./bsod.php:/var/www/html/bsod.php:z
+      - ./CHANGELOG.md:/var/www/html/CHANGELOG.md:z
+
+      - ./config:/var/www/html/config:z
+
+  mariadb:
+    image: mariadb:10.2
+    user: ${CURRENT_UID}
+    command: --log-error      # suppress InnoDB spam
+    environment:
+      - MYSQL_DATABASE=candb
+      - MYSQL_USER=candb
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+     - "3306:3306"
+    volumes:
+     - "${HOME}/.protodb-data-mariadb:/var/lib/mysql:Z"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+     - PMA_HOST=mariadb
+     - PMA_USER=candb
+     - PMA_PASSWORD=password
+    ports:
+     - "10081:80"

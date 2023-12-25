@@ -1,0 +1,11 @@
+dashboard_links:
+  - title_html: '&#x1F4D6;&ensp;Example link'
+    url: '#'
+
+dashboard:
+  pinned_packages:
+    - name: Package1
+      color: "#f89503"
+    - name: Package2
+      color: "#3678cb"
+    - name: Package3

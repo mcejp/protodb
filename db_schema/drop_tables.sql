@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `bus`;
+DROP TABLE IF EXISTS `drc_incident`;
+DROP TABLE IF EXISTS `enum_item`;
+DROP TABLE IF EXISTS `enum_type`;
+DROP TABLE IF EXISTS `message`;
+DROP TABLE IF EXISTS `message_field`;
+DROP TABLE IF EXISTS `message_node`;
+DROP TABLE IF EXISTS `node`;
+DROP TABLE IF EXISTS `node_bus`;
+DROP TABLE IF EXISTS `package`;
+DROP TABLE IF EXISTS `unit_sdo`;
+DROP TABLE IF EXISTS `users`;

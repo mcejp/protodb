@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block extra_scripts %}
+{# I dread to think how much bloat this adds #}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+{% endblock %}
+
+{% block page_style %}
+<style>
+body {
+    margin-top: 120px;
+}
+
+.bus-stats-table {
+    /*font-size: 85%;*/
+}
+
+.unpad {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.unpad tr>*:first-child {
+    padding-left: 15px !important;
+}
+
+.unpad tr>*:last-child {
+    padding-right: 15px !important;
+}
+
+/* alignment */
+.bus-stats-table tr>*:nth-child(1),
+.bus-stats-table tr>*:nth-child(3),
+.bus-stats-table tr>*:nth-child(4),
+.bus-stats-table tr>*:nth-child(5),
+.bus-stats-table tr>*:nth-child(6),
+.bus-stats-table tr>*:nth-child(7),
+.bus-stats-table tr>*:nth-child(8),
+.bus-stats-table tr>*:nth-child(9) {
+    text-align: right;
+}
+
+/* datatable resets to bootstrap default */
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 2px solid #dee2e6;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+    border-top: 1px solid #dee2e6;
+}
+</style>
+{% endblock %}
+
+{% block toolbar %}
+<div class="toolbar-container">
+    <div class="container">
+        <ul class="toolbar">
+            <li><a href="{{ url_bus_export_DBC(bus) }}"><i class="fas fa-file-download"></i>&ensp;Export to DBC</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+
+{% for unit in by_unit %}
+<div class="container container-paper">
+    <h1><i class="fas fa-network-wired"></i>&ensp;Statistics for bus {{ bus["name"] }}</h1>
+
+    <div class="unpad">
+    <table class="table table-sm compact bus-stats-table">
+        <thead>
+        <tr>
+            <th>Unit</th>
+            <th>Message</th>
+            <th>Message ID</th>
+            <th><abbr title="Calculated as reciprocal of message transmission period">Frequency</abbr></th>
+            <th>Fields</th>
+            <th><abbr title="Bits of information in message (sum of all fields)">Useful bits</abbr></th>
+            <th><abbr title="Bits of information transmitted per unit of time">Useful bandwidth</abbr></th>
+            <th><abbr title="Bits transmitted per unit of time including overhead and worst-case bit stuffing">Total bandwidth</abbr></th>
+            <th><abbr title="Ratio of useful bandwidth to total bandwidth">Efficiency</abbr></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for message in unit["messages"] %}
+        {% set stats = message["stats"] %}
+        <tr>
+            <td><a href="{{ url_message_parent_node(message) }}">{{ message["owner_name"] }}</a></td>
+            <td><strong><a href="{{ url_message(message) }}">{{ message["name"] }}</a></strong></td>
+
+            {# TODO: proper ordering by CAN ID is not tested #}
+            <td><a href="{{ url_message(message) }}">{{ message["id_hex"] if message["id_hex"] else "&mdash;" }}</a></td>
+
+            {% if stats["frequency"] is not none %}
+            <td data-order="{{ stats["frequency"] }}">{{ (stats["frequency"] | string) + " Hz" }}</td>
+            {% else %}
+            <td data-order=""></td>
+            {% endif %}
+            <td>{{ stats["num_fields"] }}</td>
+            <td>{{ stats["useful_bits"] }}</td>
+            {% if stats["useful_bandwidth"] is not none %}
+            <td data-order="{{ stats["useful_bandwidth"] }}">{{ (stats["useful_bandwidth"] | string) + " bit/s" }}</td>
+            {% else %}
+            <td data-order=""></td>
+            {% endif %}
+            {% if stats["total_bandwidth"] is not none %}
+            <td data-order="{{ stats["total_bandwidth"] }}">{{ (stats["total_bandwidth"] | string) + " bit/s" }}</td>
+            {% else %}
+            <td data-order=""></td>
+            {% endif %}
+            {% if stats["total_bandwidth"] is not none and stats["total_bandwidth"] > 0 %}
+            <td data-order="{{ (100 * stats["useful_bandwidth"] / stats["total_bandwidth"]) | round(2) }}">{{ (100 * stats["useful_bandwidth"] / stats["total_bandwidth"]) | int }} %</td>
+            {% else %}
+            <td data-order=""></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+            <th></th>
+            <th>Total</th>
+            <th></th>
+            <th></th>
+            <th>{{ num_fields_total }}</th>
+            <th>{{ useful_bits_total }}</th>
+            <th>{{ (useful_bandwidth_total / 1000) | round(1, "ceil") }} kbit/s</th>
+            <th>{{ (total_bandwidth / 1000) | round(1, "ceil") }} kbit/s</th>
+            <th>
+            {%- if total_bandwidth > 0 -%}
+                {{ (100 * useful_bandwidth_total / total_bandwidth) | int }} %
+            {%- endif -%}
+            </th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+
+    <div class="row justify-content-md-center mt-3">
+        <table class="table table-sm col-md-auto" style="width: auto">
+            <thead>
+                <tr>
+                    <th colspan="2">Utilization summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if bus.bitrate %}
+                <tr>
+                    <td>Bus bitrate</td>
+                    <td class="text-right">{{ (bus.bitrate / 1000) | round(1, "ceil") }} kbit/s</td>
+                </tr>
+                <tr>
+                    <td>Estimated traffic</td>
+                    <td class="text-right">{{ (total_bandwidth / 1000) | round(1, "ceil") }} kbit/s</td>
+                </tr>
+                <tr>
+                    <td>Estimated bus load</td>
+                    <td class="text-right">{{ (total_bandwidth / bus.bitrate * 100) | round(1, "ceil") }} %</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="2"><i class="text-warning fas fa-exclamation-triangle"></i>&ensp;Please specify the bus bitrate to enable this feature.</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endfor %}
+
+<script>
+$(document).ready(function() {
+    $('.bus-stats-table').DataTable({
+        paging: false,
+        searching: false,
+        info: false,
+    });
+} );
+</script>
+{% endblock %}

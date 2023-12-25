@@ -1,0 +1,45 @@
+version: "2.1"
+
+# NOTE: Only for testing, use external MySQL server in production!
+
+services:
+  protodb:
+    image: protodb:latest
+    working_dir: /var/www/html
+    user: ${CURRENT_UID}
+    environment:
+      - PROTODB_LOGIN_METHOD=arbitrary
+      - PROTODB_BASE_PATH=/
+      - PROTODB_DEVELOPMENT=1
+      - PROTODB_INSTANCE_NAME=localhost
+
+      - PROTODB_PDO_DSN=mysql:host=mariadb;dbname=candb;charset=utf8mb4;collation=utf8mb4_unicode_ci
+      - PROTODB_PDO_USER=candb
+      - PROTODB_PDO_PASSWORD=password
+      - PROTODB_CONN_STRING=mysql:host=mariadb;dbname=candb;charset=utf8mb4;collation=utf8mb4_unicode_ci;user=candb;password=password
+
+      - PROTODB_PDO_RETRY=1
+    volumes:
+      - ./build:/var/www/html/build:z
+      - ./db_schema:/var/www/html/db_schema:z
+      - ./tests:/var/www/html/tests:z
+
+      - ./container/phpunit-9.5.11.phar:/phpunit.phar
+      - ./container/run-tests.sh:/var/www/html/run-tests.sh:z
+      - ./phpunit.xml:/var/www/html/phpunit.xml:z
+    entrypoint: "/bin/sh"
+    command: "./run-tests.sh"
+
+  mariadb:
+    image: mariadb:10.2
+    user: ${CURRENT_UID}
+    command: --log-error      # suppress InnoDB spam
+    environment:
+      - MYSQL_DATABASE=candb
+      - MYSQL_USER=candb
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+     - "13306:3306"
+    volumes:
+     - /tmp/protodb_test_data:/var/lib/mysql:Z

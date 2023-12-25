@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ BRANDNAME }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href='{{ BASE_PATH }}static/css/style.css' rel='stylesheet' type='text/css'>
+
+    {% block extra_scripts %}
+    {% endblock %}
+
+    <style>
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container-paper {
+    background-color: #fff;
+    padding: 15px 15px;
+
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.container-paper>h1 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+    </style>
+
+    {% block page_style %}
+    {% endblock %}
+
+</head>
+<body>
+
+{% macro breadcrumb(stack) %}
+    <div class="breadcrumb-container">
+        <ol class="container breadcrumb">
+            <li><strong><a href="{{ BASE_PATH }}">ProtoDB
+
+                {% if DISPLAY_INSTANCE_NAME %}
+                &ensp;{{ INSTANCE_NAME }}
+                {% endif %}
+
+            </a></strong></li>
+
+            {% for entry in stack %}
+            {% if entry["url"] %}
+            <li><a href="{{ entry["url"] }}">{{ entry["title"] }}</a></li>
+            {% else %}
+            <li>{{ entry["title"] }}</li>
+            {% endif %}
+            {% endfor %}
+
+            <div class="col"></div>
+            <a href="{{ BASE_PATH }}logout" title="Log out">
+                <span class="fas fa-power-off"></span>
+            </a>
+        </ol>
+    </div>
+{% endmacro %}
+
+{% macro url_bus_export_DBC(bus) %}{{ BASE_PATH }}buses/{{ bus.id }}/export-dbc{% endmacro %}
+{% macro url_message(message) %}{{ BASE_PATH }}messages/{{ message.id }}{% endmacro %}
+{% macro url_message_parent_node(message) %}{{ BASE_PATH }}units/{{ message.node_id }}{% endmacro %}
+
+<div class="fixed-header">
+    {% if BREADCRUMB_PATH %}
+    {{ breadcrumb(BREADCRUMB_PATH) }}
+    {% else %}
+    {# TODO: unnecessary repetition #}
+    <div class="breadcrumb-container">
+        <ol class="container breadcrumb">
+            <li><strong><a href="{{ BASE_PATH }}">ProtoDB&ensp;{{ INSTANCE_NAME }}</a></strong></li>
+            <div class="col"></div>
+            <a href="{{ BASE_PATH }}logout" title="Log out">
+                <span class="fas fa-power-off"></span>
+            </a>
+        </ol>
+    </div>
+    {% endif %}
+
+    {% block toolbar %}
+    {% endblock %}
+</div>
+
+{% block body %}
+{% endblock %}
+
+<div style="height: 1rem"></div>
+<div class="container">
+    <div class="row small">
+        <p class="col">{% block footer_left %}{% endblock %}</p>
+        <a href="https://github.com/mcejp/protodb">ProtoDB</a>
+    </div>
+</div>
+</body>
+</html>

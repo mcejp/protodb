@@ -1,0 +1,109 @@
+#
+# Copyright (C) 2016-2023 Martin Cejp
+#
+# This file is part of ProtoDB.
+#
+# ProtoDB is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# ProtoDB is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with ProtoDB.  If not, see <http://www.gnu.org/licenses/>.
+
+openapi: 3.0.0
+info:
+  title: ProtoDB API
+  description: ProtoDB API
+  version: 1.0.0
+
+paths:
+  /v1/packages:
+    get:
+      description: "Returns a list of all packages. Required role: api_read_user"
+      responses:
+        '200':
+          description: The package model.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PackagesIndex'
+
+  /v1/packages/{name}/with-relations:
+    get:
+      description: >-
+        Returns model of the package including all relations
+        (all of the package buses and connected nodes/messages)
+      responses:
+        '200':
+          description: The package model.
+          content:
+            application/json:
+              schema:
+                # TODO
+                type: object
+
+  /v1/packages/{name}/buses/{busName}/with-relations:
+    get:
+      description: >-
+        Returns model of the bus including all messages sent on it.
+        Only DBC format is currently supported for the endpoint.
+      responses:
+        '200':
+          description: The bus model.
+          content:
+            application/vnd.dbc: {}
+
+  /v1/packages/{name}/nodes/{nodeName}/code-tx.zip:
+    get:
+      description: Generate mode for a node using the Tx C/C++ library.
+      responses:
+        '200':
+          description: Package containing the generated code.
+          content:
+            application/zip: {}
+
+  /v1/ping:
+    get:
+      description: Say hello. Does not require any particular user role.
+      responses:
+        '200':
+          description: Ok.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  server:
+                    type: string
+
+  /legacy/packages/{name}/nodes/{nodeName}/with-relations:
+    get:
+      description: Returns model of the node including all relations (sent & received messages)
+      responses:
+        '200':
+          description: The node model in the legacy "JSON 1.0" format.
+          content:
+            application/json:
+              schema:
+                # TODO
+                type: object
+
+components:
+  schemas:
+    PackagesIndex:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+      example:
+        - name: Package1
+        - name: Package2
+        - name: Package3

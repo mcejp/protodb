@@ -1,0 +1,14 @@
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE `bus`;
+TRUNCATE TABLE `changelog`;
+TRUNCATE TABLE `drc_incident`;
+TRUNCATE TABLE `enum_item`;
+TRUNCATE TABLE `enum_type`;
+TRUNCATE TABLE `message`;
+TRUNCATE TABLE `message_field`;
+TRUNCATE TABLE `message_node`;
+TRUNCATE TABLE `node`;
+TRUNCATE TABLE `node_bus`;
+TRUNCATE TABLE `package`;
+TRUNCATE TABLE `unit_sdo`;
+SET FOREIGN_KEY_CHECKS = 1;

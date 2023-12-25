@@ -1,0 +1,8 @@
+.mypy_cache
+dist
+__pycache__
+/build/
+/config/db_credentials.php
+/node_modules/
+/venv/
+/.phpunit.result.cache

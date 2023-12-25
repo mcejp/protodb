@@ -1,0 +1,15 @@
+# Highest field first -- opposite of message fields layout!
+
+- name: Example
+  frame_type: CAN_STD
+  frame_id_fields:
+    - name: Priority
+      bits: 3
+      #min_value: 0 -- implicit
+      label_fmt: "P%d" # P0..P7
+    - name: Node
+      bits: 4
+      label_fmt: "DEV%d" # DEV0..DEV15
+    - name: Message
+      bits: 4
+      label_fmt: "msg%d" # msg0..msg15

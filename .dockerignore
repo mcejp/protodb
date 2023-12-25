@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Add only specific directories & files
+!/api-server
+!/candb
+!/config
+!/container
+!/protodb
+!/static
+!/vendor
+!/views
+!/bootstrap.php
+!/bsod.php
+!/CHANGELOG.md
